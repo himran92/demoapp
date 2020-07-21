@@ -1,25 +1,25 @@
-##Install Python in Mac
+## Install Python in Mac
 Check if your current version is Python 3 by 
 `python --version`
 If Not install version 3
 
-##Virtual Environment
+## Virtual Environment
 After cloning the project, setup the virtual environment by following commands inside project folder
 <br />
 `python3 -m venv env` 
 <br />
 `source env/bin/activate`
 
-##Download all requirments
+## Download all requirments
 In python, requirments.txt file holds all the information of installed packages and their versions.
 Download all dependencies of project by command
 `pip install -r requirements.txt `
 
-##Update dependencies
+## Update dependencies
 If you add any dependency within the project run the following command to update requirements.txt file
 `pip freeze > requirements.txt`
 
-##Create App in Project
+## Create App in Project
 In order to create a new django app, within the main project repo
 `cd demoapp`
 then create another app like existing `pdfforms` app
