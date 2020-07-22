@@ -24,3 +24,18 @@ In order to create a new django app, within the main project repo
 `cd demoapp`
 then create another app like existing `pdfforms` app
 `django-admin startapp app2`
+
+## React frontend
+
+You'll need to install Yarn to run the frontend app in development. The quickest way is with Homebrew:
+`brew install yarn`
+
+Then:
+
+```
+cd demoapp/pdf-gen
+yarn install
+yarn start
+```
+
+The React dev server will be running on `localhost:3000`.
