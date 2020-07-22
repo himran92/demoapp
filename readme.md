@@ -24,6 +24,41 @@ In order to create a new django app, within the main project repo
 `cd demoapp`
 then create another app like existing `pdfforms` app
 `django-admin startapp app2`
+And then add the app in InstalledApps of settings
+
+## Migrate Tables Form & Field
+`python manage.py migrate`
+<br />
+This will create a Table Form (id, name, fields list)
+<br />
+And a Table Field with (id, name, type). Both Forms and Fields have many to many relationship.
+
+## Create Form & Field
+We can add values in form and field table by using django admin. 
+* Create SuperUser by
+`python manage.py createsuperuser`
+<br />
+Give Username, Email, Password. 
+<br />
+* Run the Django Server by `python ./manage.py runserver`
+* Go to `http://127.0.0.1:8000/admin`. And give Username and Password to sign-in. 
+* Use the Console to add/edit Forms and their fields. You need to add Fields first which can be selected for a form later. 
+
+## Query by GraphQL
+* Go to `http://localhost:8000/graphql`
+* To retrieve all forms with their fields, give query:
+
+```query {
+  allForms {
+    id
+    name
+    fields {
+      id
+      name
+    }
+  }
+}
+```
 
 ## React frontend
 
