@@ -7,11 +7,17 @@ const client = createClient({ url: 'http://localhost:8000/graphql' });
 interface Form {
   id: number | string;
   name: string;
+  fields: Field[]
+}
+
+interface Field {
+  id: number | string;
+  name: string;
 }
 
 const Forms = () => {
   const [res, executeQuery] = useQuery({
-    query: `query { allForms { id name }}`
+    query: `query { allForms { id name fields { id name } }}`
   })
 
   if (res.fetching) return <p>Loading...</p>;
@@ -20,7 +26,8 @@ const Forms = () => {
   return (
     <ul>
       {res.data.allForms.map((form: Form) => (
-        <li key={form.id}>{form.name}</li>
+        <li key={form.id}>{form.name} 
+           <ul>Fields: {form.fields.map(field => <li key={field.id}>{field.name}</li>)}</ul></li>
       ))}
     </ul>
   )
