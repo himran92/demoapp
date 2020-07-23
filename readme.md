@@ -28,20 +28,15 @@ And then add the app in InstalledApps of settings
 
 ## Migrate Tables Form & Field
 * Make migrations of the models `python manage.py makemigrations`
-<br />
 * Migrate `python manage.py migrate`
-<br />
-* This will create a Table Form (id, name, fields list)
-<br />
+* This will create a Table Form (id, name, fields list). 
 And a Table Field with (id, name, type). Both Forms and Fields have many to many relationship.
 
 ## Create Form & Field
 We can add values in form and field table by using django admin. 
 * Create SuperUser by
 `python manage.py createsuperuser`
-<br />
 Give Username, Email, Password. 
-<br />
 * Run the Django Server by `python ./manage.py runserver`
 * Go to `http://127.0.0.1:8000/admin`. And give Username and Password to sign-in. 
 * Use the Console to add/edit Forms and their fields. You need to add Fields first which can be selected for a form later. 
