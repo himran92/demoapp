@@ -1,19 +1,10 @@
 import React from 'react';
-import './App.css';
 import { Provider, createClient, useQuery } from 'urql';
 
+import { Form, Field } from '../../types'
+import './App.css';
+
 const client = createClient({ url: 'http://localhost:8000/graphql' });
-
-interface Form {
-  id: number | string;
-  name: string;
-  fields: Field[]
-}
-
-interface Field {
-  id: number | string;
-  name: string;
-}
 
 const Forms = () => {
   const [res, executeQuery] = useQuery({
@@ -27,7 +18,7 @@ const Forms = () => {
     <ul>
       {res.data.allForms.map((form: Form) => (
         <li key={form.id}>{form.name} 
-           <ul>Fields: {form.fields.map(field => <li key={field.id}>{field.name}</li>)}</ul></li>
+           <ul>Fields: {form.fields.map((field: Field) => <li key={field.id}>{field.name}</li>)}</ul></li>
       ))}
     </ul>
   )
