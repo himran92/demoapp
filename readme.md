@@ -27,13 +27,11 @@ then create another app like existing `pdfforms` app
 And then add the app in InstalledApps of settings
 
 ## Migrate Tables Form & Field
-1. Make migrations of the models
-`python manage.py makemigrations`
+* Make migrations of the models `python manage.py makemigrations`
 <br />
-2. Migrate
-`python manage.py migrate`
+* Migrate `python manage.py migrate`
 <br />
-3. This will create a Table Form (id, name, fields list)
+* This will create a Table Form (id, name, fields list)
 <br />
 And a Table Field with (id, name, type). Both Forms and Fields have many to many relationship.
 
