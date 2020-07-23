@@ -27,9 +27,13 @@ then create another app like existing `pdfforms` app
 And then add the app in InstalledApps of settings
 
 ## Migrate Tables Form & Field
+1. Make migrations of the models
+`python manage.py makemigrations`
+<br />
+2. Migrate
 `python manage.py migrate`
 <br />
-This will create a Table Form (id, name, fields list)
+3. This will create a Table Form (id, name, fields list)
 <br />
 And a Table Field with (id, name, type). Both Forms and Fields have many to many relationship.
 
@@ -48,7 +52,8 @@ Give Username, Email, Password.
 * Go to `http://localhost:8000/graphql`
 * To retrieve all forms with their fields, give query:
 
-```query {
+``` 
+query {
   allForms {
     id
     name

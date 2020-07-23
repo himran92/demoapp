@@ -15,7 +15,7 @@ class FormType(DjangoObjectType):
         model = Form
 
     @graphene.resolve_only_args
-    def resolve_fields(self):
+    def resolve_alpha(self):
         return self.fields.all()
 
 
