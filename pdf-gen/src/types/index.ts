@@ -1,10 +1,11 @@
-export interface Form {
+export interface IForm {
     id: number | string;
     name: string;
-    fields: Field[]
+    fields: IField[]
 }
   
-export interface Field {
+export interface IField {
     id: number | string;
     name: string;
+    type: string;
 }
