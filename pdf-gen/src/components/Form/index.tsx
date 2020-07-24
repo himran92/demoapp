@@ -11,7 +11,7 @@ const Form: FC<IForm> = ({ name, fields }) => (
                 <Field id={field.id} name={field.name} type={field.type} />
             </div>)
         )}
-        <button type="button" onClick={() => console.log('todo: log values here')}>submit me / save pdf</button>
+        <button type="button" onClick={() => console.log('todo: log values here')}>submit / save pdf</button>
     </form>
 )
 
