@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Provider, createClient, useQuery } from 'urql';
 
 import { IForm } from '../../types'
-import './App.css';
 import Form from '../Form';
-
+import './App.css';
 
 const client = createClient({ url: 'http://localhost:8000/graphql' });
 
