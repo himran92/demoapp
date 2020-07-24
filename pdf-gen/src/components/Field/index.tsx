@@ -2,9 +2,8 @@ import React, { FC } from 'react';
 import { IField } from '../../types';
 
 const getInputType = (type: string) => {
-     if (type === 'number') {
-         return 'number'
-     } else return 'text'
+     if (type === 'number') return type 
+     else return 'text'
 }
 
 const Field: FC<IField> = ({ id, name, type }) => (

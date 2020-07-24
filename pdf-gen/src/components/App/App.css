@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.formSelect, span {
+  cursor: pointer;
+  color: hotpink;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.formSelect {
+  list-style-type: none;
+}
