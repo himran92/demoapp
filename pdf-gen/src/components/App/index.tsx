@@ -20,15 +20,13 @@ const Forms = () => {
   const forms = res.data.allForms
 
   return (
-    <div style={{ padding: 20}}>
+    <div className="app-container">
       {!currentForm && (
-        <div>
+        <div className="form-select">
           <h4>Select a form</h4>
           <ul>
             {forms.map((form: IForm) => (
-              // <Form {...form} />
-              <li className='formSelect' onClick={() => selectForm(form.name)} key={form.id}>{form.name} </li>
-              // <ul>Fields: {form.fields.map((field: IField) => <li key={field.id}>{field.name}</li>)}</ul>
+              <li onClick={() => selectForm(form.name)} key={form.id}>{form.name}</li>
             ))}
           </ul>
         </div>
@@ -37,8 +35,8 @@ const Forms = () => {
         <div>
           <Form {...forms.find((form: IForm) => form.name === currentForm)} />
           <span onClick={() => selectForm('')}>Back to forms</span>
-        </div>)
-       }
+        </div>
+      )}
     </div>
   )
 }
@@ -46,7 +44,7 @@ const Forms = () => {
 const App = () => 
   (
     <Provider value={client}>
-      <div><Forms /></div>
+      <Forms />
     </Provider>
   );
 
