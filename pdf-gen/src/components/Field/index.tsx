@@ -7,6 +7,10 @@ const getInputType = (type: string) => {
      } else return 'text'
 }
 
-const Field: FC<IField> = ({ id, name, type }) => (<input name={name} type={getInputType(type)} />)
+const Field: FC<IField> = ({ id, name, type }) => (
+    <label htmlFor={name}>{name}: 
+        <input style={{ margin: 8 }} name={name} type={getInputType(type)} />
+    </label>
+)
 
 export default Field

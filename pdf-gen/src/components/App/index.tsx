@@ -3,6 +3,8 @@ import { Provider, createClient, useQuery } from 'urql';
 
 import { IForm } from '../../types'
 import './App.css';
+import Form from '../Form';
+
 
 const client = createClient({ url: 'http://localhost:8000/graphql' });
 
@@ -19,7 +21,8 @@ const Forms = () => {
       <h4>Select a form</h4>
     <ul>
       {res.data.allForms.map((form: IForm) => (
-        <li key={form.id}>{form.name} </li>
+        <Form {...form} />
+        // <li key={form.id}>{form.name} </li>
         // <ul>Fields: {form.fields.map((field: IField) => <li key={field.id}>{field.name}</li>)}</ul>
       ))}
     </ul>
