@@ -1,14 +1,23 @@
-.app-container {
-  padding: 20px;
-}
+  .app-container {
+    padding: 20px;
+  }
 
-.form-select li, span {
-  cursor: pointer;
-  color: hotpink;
-  text-decoration: underline;
-  margin-bottom: 10px;
-}
+  .form-select ul {
+    margin: 0;
+    padding: 0;
+  }
 
-.form-select li {
-  list-style-type: none;
-}
+  .form-select li, span {
+    cursor: pointer;
+    color: hotpink;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  .form-select li {
+    list-style-type: none;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }

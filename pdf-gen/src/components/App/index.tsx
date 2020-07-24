@@ -32,10 +32,10 @@ const Forms = () => {
         </div>
       )}
       {currentForm && (
-        <div>
+        <>
           <Form {...forms.find((form: IForm) => form.name === currentForm)} />
           <span onClick={() => selectForm('')}>Back to forms</span>
-        </div>
+        </>
       )}
     </div>
   )
