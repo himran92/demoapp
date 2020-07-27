@@ -1,0 +1,32 @@
+  .app-container {
+    padding: 20px;
+  }
+
+  .form-select ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-select li, span {
+    cursor: pointer;
+    color: hotpink;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  .form-select li {
+    list-style-type: none;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  form button {
+    margin-top: 10px;
+    cursor: pointer;
+    background: hotpink;
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: none;
+  }
